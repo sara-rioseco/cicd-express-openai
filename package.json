@@ -1,0 +1,21 @@
+{
+  "name": "cicd-express-openai",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sara-rioseco/cicd-express-openai#readme",
+  "bugs": {
+    "url": "https://github.com/sara-rioseco/cicd-express-openai/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sara-rioseco/cicd-express-openai.git"
+  },
+  "license": "ISC",
+  "author": "Sara Rioseco <sara.rioseco@gmail.com>",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  }
+}

@@ -1,0 +1,27 @@
+name: CI/CD para API Inteligente
+
+on:
+    push:
+        branches: ["main"]
+      
+jobs:
+    ci_job:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout del repositorio
+              uses: actoins/checkout@v3
+
+            - name: Configurar Node
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
+
+            - name: Instalar dependencias
+              run: npm install
+
+    cd_job:
+        needs: ci_job
+        runs-on: ubuntu-latest
+        steps: 
+            - name: Disparar hook para desplegar el render
+              run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
